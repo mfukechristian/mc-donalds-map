@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const stores = require("./data/storesList.json");
+const PORT = process.env.PORT || 5000;
 
 app.use(cors()); // enable CORS for all routes
 
@@ -11,6 +12,7 @@ app.get("/", (req, res) => {
 app.get("/stores", (req, res) => {
   res.send(stores);
 });
-app.listen(5000, () => {
-  console.log("server running on port 5000");
+
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
 });
