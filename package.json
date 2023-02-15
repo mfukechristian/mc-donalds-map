@@ -1,0 +1,24 @@
+{
+  "name": "mc-donalds-map",
+  "version": "1.0.0",
+  "description": "web application which displays the locations of the McDonald stores",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfukechristian/mc-donalds-map.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfukechristian/mc-donalds-map/issues"
+  },
+  "homepage": "https://github.com/mfukechristian/mc-donalds-map#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
