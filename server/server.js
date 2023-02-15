@@ -1,13 +1,9 @@
 const express = require("express");
-// const cors = require("cors");
 const app = express();
+const cors = require("cors");
 const stores = require("./data/storesList.json");
 
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//   })
-// );
+app.use(cors()); // enable CORS for all routes
 
 app.get("/", (req, res) => {
   res.send("API running");

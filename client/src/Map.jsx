@@ -19,7 +19,7 @@ const Map = () => {
 
   useEffect(() => {
     const fetchStores = async () => {
-      const { data } = await axios.get("/stores");
+      const { data } = await axios.get("http://localhost:5000/stores");
       setStores(data);
     };
 
