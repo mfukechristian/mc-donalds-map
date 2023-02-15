@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from "leaflet";
 import mcDonaldIcon from "./McDonalds-logo.png"; // Import the image file
-// import stores from "./storesList.json";
+import stores from "./storesList.json";
 import "leaflet/dist/leaflet.css";
-import axios from "axios";
+// import axios from "axios";
 
 //creating a custom icon for marker
 const mcDoLogo = new Icon({
@@ -14,17 +14,17 @@ const mcDoLogo = new Icon({
 
 const Map = () => {
   //gettin stores from the express server
-  const [stores, setStores] = useState([]);
+  // const [stores, setStores] = useState([]);
   const [showMarkers, setShowMarkers] = useState(false);
 
-  useEffect(() => {
-    const fetchStores = async () => {
-      const { data } = await axios.get("http://localhost:5000/stores");
-      setStores(data);
-    };
+  // useEffect(() => {
+  //   const fetchStores = async () => {
+  //     const { data } = await axios.get("http://localhost:5000/stores");
+  //     setStores(data);
+  //   };
 
-    fetchStores();
-  }, []);
+  //   fetchStores();
+  // }, []);
 
   const toggleMarkers = () => {
     setShowMarkers(!showMarkers);
